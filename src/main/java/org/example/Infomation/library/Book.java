@@ -1,4 +1,4 @@
-package org.example.library;
+package org.example.Infomation.library;
 public class Book
 {
     String name;
