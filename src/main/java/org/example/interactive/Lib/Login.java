@@ -1,11 +1,15 @@
 package org.example.interactive.Lib;
 
 import org.example.Infomation.user.UserManager;
+import org.example.MyLog.Log;
 
+import java.security.PrivateKey;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Login {
-
+    private Integer name;
     private int lockNum = 0;
     private boolean cookie = false;
     public Login(){}
@@ -25,11 +29,11 @@ public class Login {
 
     private boolean loginBackGro(UserManager userManager,boolean flag)
     {
-        Integer name;
+
         String passwd;
         Scanner input = new Scanner(System.in);
         System.out.println("请输入您的账号");
-        name = input.nextInt();
+        name = input.nextInt();//超过11位就报错
         System.out.println("请输入您的密码");
         passwd = input.next();
         if (validate(name, passwd)) {
@@ -50,6 +54,18 @@ public class Login {
         if(lockNum>=3)
         {
             System.out.println("多次输入错误账号被锁定，请稍后再尝试");
+            Log log=new Log();
+            log.logger.log(Level.SEVERE,"账号"+name+"多次输入错误账号被锁定");
+            try
+            {
+                Thread.sleep(300000);
+            }
+            catch(InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            lockNum=0;
+            loginBackGro(userManager,false);
         }
     }
 

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- *
+ * <em>ee4214</em>
  * */
 public class Library extends ReadLocalStor<Book> {
 
@@ -23,6 +23,12 @@ public class Library extends ReadLocalStor<Book> {
         return getNum();
     }
     //用户查找书名，查看是否有这边书
+
+    /**
+     *
+     * @param name 传递书的名字获取该书的信息
+     * @return book这个变量
+     */
     public Book searchBook(String name)
     {
         if(search.containsKey(name))
@@ -33,6 +39,11 @@ public class Library extends ReadLocalStor<Book> {
             return null;
         }
     }
+
+//    @Override
+//    public HashMap<String, Book> getSearch() {
+//        return search;
+//    }
 
     //读取本地存储的数据
     @Override
@@ -47,7 +58,6 @@ public class Library extends ReadLocalStor<Book> {
         try (Scanner input = new Scanner(new File(name))) {
             while (input.hasNextLine()) {
                 String[] bookInfor=input.nextLine().split(" ");
-                System.out.println(bookInfor[0]+" "+bookInfor[1]);
                 Book book=new Book(bookInfor[0],bookInfor[1],getNum());
                 increaThing(book);
                 setNum(getNum()+1);
@@ -63,7 +73,6 @@ public class Library extends ReadLocalStor<Book> {
     {
         bookList.put(book.ISBN, book);
         search.put(book.name,book);
-        System.out.println("success2");
     }
 
     //用来顺序输出书本的内容

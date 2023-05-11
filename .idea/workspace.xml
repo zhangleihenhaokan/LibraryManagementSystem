@@ -5,23 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3549a930-e962-46d0-8aa5-afe4f20b6d05" name="Changes" comment="Changes 2023.4.15">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/book" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Infomation/library/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Infomation/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Infomation/user/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Log/LogManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Log/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/abstraction/ReadLocalStor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/background/Copywriting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/interactive/Lib/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MyLog/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MyLog/myapp.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/interactive/Lib/FindBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Infomation/library/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Infomation/library/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Log/LogManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Infomation/library/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/Library.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/ManageUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interactive/Lib/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interactive/Lib/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +36,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2MiESUK6KPHvSWWXI0Kj6lUw3vg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -58,7 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/宅苧/IdeaProjects/LibraryManagementSystem&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/宅苧/IdeaProjects/张蕾实验二个人作业/Homework&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -94,6 +89,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.demo" />
       </list>
     </recent_temporary>
   </component>
@@ -114,6 +110,7 @@
       <workItem from="1679226102240" duration="165000" />
       <workItem from="1680593839748" duration="879000" />
       <workItem from="1680773843335" duration="1018000" />
+      <workItem from="1682057657359" duration="1625000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1679226412391</created>
@@ -129,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679227461573</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changes 2023.4.15">
+      <created>1681554328132</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681554328132</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
