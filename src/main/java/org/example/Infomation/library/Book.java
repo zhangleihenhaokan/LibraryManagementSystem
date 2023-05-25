@@ -18,6 +18,6 @@ public class Book
     @Override
     public String toString()
     {
-        return name+":"+ISBN+","+"author="+author;
+        return name+":"+ISBN+","+"author:"+author;
     }
 }

@@ -1,17 +1,16 @@
 package org.example.interactive.Lib;
 
-import org.example.Infomation.user.UserManager;
+import org.example.Infomation.user.User;
 import org.example.MyLog.Log;
+import org.example.abstraction.ReadLocalStor;
 
-import java.security.PrivateKey;
 import java.util.Scanner;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Login {
     private Integer name;
     private int lockNum = 0;
-    private boolean cookie = false;
+    private boolean cookie = false;//做一个东西，里面涉及人名字以及它的登录状态
     public Login(){}
     //检验账号密码是否有问题
     private boolean validate(int account, String passwd) {
@@ -27,7 +26,7 @@ public class Login {
         return cookie;
     }
 
-    private boolean loginBackGro(UserManager userManager,boolean flag)
+    private boolean loginBackGro(ReadLocalStor<User> userManager,boolean flag)
     {
 
         String passwd;
@@ -49,7 +48,7 @@ public class Login {
     }
 
     //检测是否需要重新输入验证密码
-    public void control(UserManager userManager) {
+    public void control(ReadLocalStor<User> userManager) {
         cookie=loginBackGro(userManager,false);
         if(lockNum>=3)
         {
@@ -69,7 +68,7 @@ public class Login {
         }
     }
 
-    public boolean login(UserManager userManager,int account, String passwd) {
+    public boolean login(ReadLocalStor<User> userManager,int account, String passwd) {
         if (userManager.getList().containsKey(account)&&(userManager.getList().get(account).getPwd().equals(passwd))) {
             System.out.println("登录成功");
             lockNum = 0;
