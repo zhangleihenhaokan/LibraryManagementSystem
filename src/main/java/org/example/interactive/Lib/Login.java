@@ -1,17 +1,20 @@
 package org.example.interactive.Lib;
 
-import org.example.Infomation.user.User;
+import org.example.Infomation.user.Cookie;
+import org.example.Infomation.user.UserManager;
 import org.example.MyLog.Log;
-import org.example.abstraction.ReadLocalStor;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.logging.Level;
 
 public class Login {
     private Integer name;
     private int lockNum = 0;
-    private boolean cookie = false;//做一个东西，里面涉及人名字以及它的登录状态
-    public Login(){}
+    private Cookie cookie;
+     public Login(Cookie cookie){
+         this.cookie=cookie;
+     }
     //检验账号密码是否有问题
     private boolean validate(int account, String passwd) {
         if ( passwd.length() < 9) {
@@ -22,11 +25,7 @@ public class Login {
         return true;
     }
 
-    public boolean isCookie() {
-        return cookie;
-    }
-
-    private boolean loginBackGro(ReadLocalStor<User> userManager,boolean flag)
+    private boolean loginBackGro(UserManager userManager,boolean flag)
     {
 
         String passwd;
@@ -48,8 +47,8 @@ public class Login {
     }
 
     //检测是否需要重新输入验证密码
-    public void control(ReadLocalStor<User> userManager) {
-        cookie=loginBackGro(userManager,false);
+    public void control(UserManager userManager) {
+        cookie.setBeAuthenticated(loginBackGro(userManager,false));
         if(lockNum>=3)
         {
             System.out.println("多次输入错误账号被锁定，请稍后再尝试");
@@ -68,9 +67,10 @@ public class Login {
         }
     }
 
-    public boolean login(ReadLocalStor<User> userManager,int account, String passwd) {
+    public boolean login(UserManager userManager,int account, String passwd) {
         if (userManager.getList().containsKey(account)&&(userManager.getList().get(account).getPwd().equals(passwd))) {
             System.out.println("登录成功");
+            cookie.setName(userManager.getList().get(account).getName());
             lockNum = 0;
             return true;
         }
